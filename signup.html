@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up – AI Galaxyy</title>
+    <link rel="stylesheet" href="C:\kanimozhi\AigalaxyyProject\css\style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+             background: transparent;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 30px;
+            border-radius: 0px;
+            width: 360px;            
+            text-align: center;
+        }
+        .signup-container img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        h1 { margin: 10px 0; font-size: 28px; }
+        p.tagline { font-size: 14px; margin-bottom: 25px; color: white; }
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, select { padding: 12px; border-radius: 6px; border: none; font-size: 14px; }
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #5b7cff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #102e91; }
+        .bottom-text { margin-top: 20px; font-size: 13px; color: white; }
+        .back-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop playsinline class="bg-video">
+    <source src="C:\kanimozhi\AigalaxyyProject\images\video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+
+<a href="login.html" class="back-btn">🔙</a>
+
+<div class="signup-container">
+    <img src="C:\kanimozhi\AigalaxyyProject\images\logo.jpeg" alt="AI Galaxyy Logo">
+    <h1>Create Account</h1>
+    <p class="tagline">Join the AI universe 🌌</p>
+
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Email or Phone Number" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <select name="location" required>
+            <option value="" disabled selected>Select Location</option>
+            <option value="chennai">Chennai</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="madurai">Madurai</option>
+            <option value="trichy">Tiruchirappalli</option>
+            <option value="salem">Salem</option>
+            <option value="erode">Erode</option>
+            <option value="tirunelveli">Tirunelveli</option>
+            <option value="vellore">Vellore</option>
+            <option value="thanjavur">Thanjavur</option>
+            <option value="tiruppur">Tiruppur</option>
+        </select>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="bottom-text">
+        Already have an account? 
+        <a href="login.html" style="color: #5b7cff; text-decoration: none;">Login</a>
+    </p>
+</div>
+
+</body>
+</html>

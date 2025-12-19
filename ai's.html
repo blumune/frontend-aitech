@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Galaxyy</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        /* background-image: url("C:/kanimozhi/AigalaxyyProject/images/bg2.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 40px;
+        background: rgba(0,0,0,0.4);
+    }
+
+    header h2 {
+        margin: 0;
+    }
+
+    nav a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #5b7cff;
+    }
+
+    main {
+        padding: 50px 80px;
+        text-align: center;
+    }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 20px auto;
+    }
+
+    .search-box input {
+        width: 280px;
+        padding: 12px 14px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .search-box button {
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: none;
+        background: #1e90ff;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .search-box button:hover {
+        background: #0b5ed7;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .card {
+        background: white;
+        width: 280px;
+        padding: 15px;
+        gap:10px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .card h3 {
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: black;
+    }
+
+    .card button {
+        margin-top: 15px;
+        padding: 8px 24px;
+        border: none;
+        border-radius: 6px;
+        background: #5b7cff;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .card button:hover {
+        background: #3a5dcc;
+        transform: scale(1.1);
+    }
+    .galaxy-title span {
+    font-size: 48px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0 3px;
+    animation: glow 3s infinite alternate;
+}
+
+.galaxy-title span:nth-child(1) { color:  #3399ff; }
+.galaxy-title span:nth-child(2) { color: #3399ff; }
+.galaxy-title span:nth-child(3) { color: white; }
+.galaxy-title span:nth-child(4) { color: white; }
+.galaxy-title span:nth-child(5) { color:  white; }
+.galaxy-title span:nth-child(6) { color:  white; }
+.galaxy-title span:nth-child(7) { color:  white; }
+.galaxy-title span:nth-child(8) { color:  white; }
+.galaxy-title span:nth-child(9) { color:  white; }
+
+    .compare-btn {
+        margin-top: 50px;
+        padding: 12px 60px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        background: #5b7cff;
+        color: white;
+        cursor: pointer;
+        font-weight: normal;
+        transition: transform 0.3s;
+    }
+
+    .compare-btn:hover {
+        transform: scale(1.1);
+        background: #3a5dcc;
+    }
+
+    @media (max-width: 900px) {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+    <link rel="stylesheet" href="C:\kanimozhi\AigalaxyyProject\css\style.css">
+
+</head>
+<body>
+<video autoplay muted loop playsinline class="bg-video">
+    <source src="C:\kanimozhi\AigalaxyyProject\images\video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<a href="index.html" class="back-btn">🔙</a>
+
+<center>
+<section class="title-section">
+<h1 class="galaxy-title">
+    <span>A</span><span>I</span> <span>G</span><span>a</span><span>l</span><span>a</span><span>x</span><span>y</span><span>y</span>
+    </h1>
+    <br>
+    <i><p>"Explore the universe of Artificial Intelligence tools"</p></i>
+</section>
+</center>
+
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search AI tools...">
+    <button onclick="searchCards()">Search</button>
+</div>
+
+<main>
+    <div class="cards" id="cardsContainer">
+        <div class="card">
+            <h3>ChatGPT</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagechat.png" width=90 height=60 alt="AI Image">            
+            <p>AI for writing & coding</p>
+            <button class="compare-btn" onclick="window.location.href='chatgpt.html'">Visit</button>
+        </div>
+
+        <div class="card">
+            <h3>Copilot</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagecopilot.png" width=95 height=60 alt="AI Image">            
+            <p>AI for coding</p>
+            <button class="compare-btn" onclick="window.location.href='Copilot.html'">Visit</button>        
+        </div>
+
+        <div class="card">
+            <h3>Gemini</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagegemini.png" width=60 height=60 alt="AI Image">            
+            <p>Google AI assistant</p>
+            <button class="compare-btn" onclick="window.location.href='gemini.html'">Visit</button>        
+        </div>
+
+        <div class="card">
+            <h3>Jasper</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagejasper.png" width=90 height=90 alt="AI Image" class="title-img">            
+            <p>Content generation AI</p>
+            <button>Visit</button>
+        </div>
+
+        <div class="card">
+            <h3>Canva AI</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagecanva.jpg" width=80 height=65 alt="AI Image" class="title-img">            
+            <p>Design made easy</p>
+            <button class="compare-btn" onclick="window.location.href='compare.html'">
+            Compare
+        </button>
+
+        </div>
+
+        <div class="card">
+                        <h3>DALL·E</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagedall.jpeg" width=90 height=75 alt="AI Image" class="title-img">       
+            <p>AI image generation</p>
+            <button>Visit</button>
+        </div>
+
+        <div class="card">
+            <h3>Midjourney</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\myjourney.png" width=90 height=75 alt="AI Image" class="title-img">       
+            <p>AI art generator</p>
+            <button>Visit</button>
+        </div>
+        <div class="card">
+            <h3>Perplexity AI</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imageper.jpg" width=90 height=75 alt="AI Image" class="title-img">       
+            <p>Research and finding accurate answers</p>
+            <button>Visit</button>
+        </div>
+        <div class="card">
+            <h3>Meta AI</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagemeta.jpg" width=80 height=80 alt="AI Image" class="title-img">       
+            <p>AI innovations and experiments</p>
+            <button>Visit</button>
+        </div>
+        <div class="card">
+            <h3>Grok</h3>
+            <img src="C:\kanimozhi\AigalaxyyProject\images\imagegrok.png" width=80 heigh=t=75 alt="AI Image" class="title-img">       
+            <p>AI-powered chat and workplace help</p>
+            <button>Visit</button>
+        </div>
+    
+
+        <!-- Add remaining cards here (Jasper, Canva AI, DALL·E, etc.) -->
+
+    </div>
+
+    <button class="compare-btn" onclick="window.location.href='compare.html'">
+        Compare
+    </button>
+</main>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const cardsContainer = document.getElementById('cardsContainer');
+    const cards = cardsContainer.getElementsByClassName('card');
+
+    // Live search as you type
+    searchInput.addEventListener('keyup', function() {
+        const filter = searchInput.value.toLowerCase();
+        for (let i = 0; i < cards.length; i++) {
+            let cardTitle = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (cardTitle.includes(filter)) {
+                cards[i].style.display = '';
+            } else {
+                cards[i].style.display = 'none';
+            }
+        }
+    });
+
+    // Optional: search on button click
+    function searchCards() {
+        const filter = searchInput.value.toLowerCase();
+        for (let i = 0; i < cards.length; i++) {
+            let cardTitle = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            cards[i].style.display = cardTitle.includes(filter) ? '' : 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
